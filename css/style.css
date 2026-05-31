@@ -1,0 +1,381 @@
+/* -------------------------------
+   БАЗОВЫЕ ПЕРЕМЕННЫЕ И СБРОС
+--------------------------------- */
+:root {
+    --black: #111111;
+    --white: #F5F5F5;
+    --red: #B33B2C;
+    --red-dark: #8A2A1F;
+    --gray-light: #E0E0E0;
+    --gray-dark: #2C2C2C;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    position: relative;
+}
+
+/* -------------------------------
+   ФОНОВЫЕ ИЗОБРАЖЕНИЯ С ПЛАВНОЙ СМЕНОЙ
+--------------------------------- */
+.background-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out; /* Плавное переключение */
+    pointer-events: none;
+}
+
+/* Немного увеличил прозрачность, чтобы картинки были виднее */
+.bg-layer.active {
+    opacity: 0.25; /* 25% - капельку видно, но не мешает тексту */
+}
+
+/* ВАША КАРТИНКА */
+.bg-1 {
+    background-image: url('../img/5a7b1ea2e6f87d2e70e5ad7e9a8df5f5.jpg');
+}
+
+.bg-2 {
+    background-image: url('../img/8d7f783b0631dbc18c5563912e2de803.jpg');
+}
+
+.bg-3 {
+    background-image: url('../img/2d6ebf97f33f018ade2fdca1dbef8a2c.jpg');
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 2rem 0 2rem;
+    background-color: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(2px);
+}
+
+/* -------------------------------
+   ШАПКА (ТЕМА ПРАКТИКУМА)
+--------------------------------- */
+.workshop-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 1.5rem;
+    background-color: rgba(245, 245, 245, 0.7);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.workshop-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.workshop-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--black);
+}
+
+.title-decoration {
+    width: 60px;
+    height: 3px;
+    background-color: var(--red);
+    margin: 1rem auto 0;
+}
+
+/* -------------------------------
+   ГЛАВНОЕ СЛОВО — ИСТОРИОГРАФИЯ
+--------------------------------- */
+.hero {
+    margin: 2rem 0 4rem 0;
+    text-align: center;
+}
+
+.hero-word {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    line-height: 1.2;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--red);
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* Карточка определения */
+.definition-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--gray-light);
+    padding: 2rem;
+    text-align: left;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+    border-radius: 4px;
+    backdrop-filter: blur(1px);
+}
+
+.red-text {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.definition-double {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.def-narrow, .def-wide {
+    flex: 1;
+    background: rgba(250, 250, 250, 0.95);
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--red);
+}
+
+.def-narrow h3, .def-wide h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--red-dark);
+    letter-spacing: -0.2px;
+}
+
+.def-narrow p, .def-wide p {
+    font-size: 0.95rem;
+    color: #2c2c2c;
+}
+
+.definition-source {
+    font-size: 0.75rem;
+    color: #777;
+    border-top: 1px dashed var(--gray-light);
+    padding-top: 0.8rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* -------------------------------
+   СЕТКА НАПРАВЛЕНИЙ
+--------------------------------- */
+.directions {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: var(--black);
+    border-left: 4px solid var(--red);
+    padding-left: 1rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Карточка направления */
+.direction-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #ddd;
+    padding: 1.6rem;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    backdrop-filter: blur(2px);
+}
+
+.direction-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--red);
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.direction-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: var(--black);
+    margin-bottom: 0.6rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.direction-card .hover-hint {
+    font-size: 0.8rem;
+    color: var(--red);
+    opacity: 0.7;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* -------------------------------
+   МОДАЛЬНОЕ ОКНО
+--------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 2rem;
+    padding: 2rem;
+    max-width: 700px;
+    width: 90%;
+    border-radius: 12px;
+    position: relative;
+    border-top: 6px solid var(--red);
+    box-shadow: 0 25px 40px -12px black;
+    animation: modalFade 0.2s ease;
+}
+
+@keyframes modalFade {
+    from { opacity: 0; transform: scale(0.96);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: var(--red);
+}
+
+#modalTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--black);
+    border-left: 3px solid var(--red);
+    padding-left: 1rem;
+}
+
+#modalBody {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1e1e1e;
+}
+
+#modalBody p {
+    margin-bottom: 1rem;
+}
+
+#modalBody strong {
+    color: var(--red-dark);
+}
+
+/* -------------------------------
+   ФУТЕР
+--------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--gray-light);
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #5a5a5a;
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 760px) {
+    .container {
+        padding: 1rem;
+        background-color: rgba(245, 245, 245, 0.92);
+    }
+    .definition-double {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .workshop-title {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 1.4rem;
+        text-align: center;
+        border-left: none;
+        border-bottom: 2px solid var(--red);
+        padding-bottom: 0.5rem;
+    }
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
