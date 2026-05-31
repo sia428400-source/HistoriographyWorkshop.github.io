@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Микроистория | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .direction-content h2 {
+            font-size: 1.3rem;
+            color: var(--red-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+            text-align: justify;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        .authors-block {
+            margin: 2rem 0 1.5rem 0;
+        }
+        
+        .authors-block h2 {
+            font-size: 1.6rem;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--red);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+        
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .author-block {
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .author-block.clickable {
+            cursor: pointer;
+            border-left: 4px solid var(--red);
+        }
+        
+        .author-block.clickable:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: var(--red);
+        }
+        
+        .author-block.non-clickable {
+            opacity: 0.7;
+            border-left: 4px solid #ccc;
+        }
+        
+        .author-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--black);
+        }
+        
+        .clickable .author-name {
+            color: var(--red);
+        }
+        
+        .author-years {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-role {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .clickable-hint {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        .direction-container {
+            min-height: 100vh;
+        }
+        
+        @media (max-width: 760px) {
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Микроистория (Microstoria)</h1>
+            
+            <h2>Когда и где появилась</h2>
+            <p>Микроистория сформировалась как самостоятельное направление в середине 1970-х годов в Италии. Родиной направления стал город Болонья, где выходил журнал Quaderni storici (основан в 1970 г.), вокруг которого сложилась группа историков-новаторов. Именно на страницах этого журнала и в ходе личных дискуссий рождались идеи нового подхода.</p>
+            <p>Важнейшую роль в институционализации сыграла книжная серия «Microstorie», выпускавшаяся туринским издательством Einaudi с 1981 по 1991 год. Под руководством Карло Гинзбурга и Джованни Леви в серии вышла 21 монография, которая задала каноны направления.</p>
+            
+            <h2>Почему возникла</h2>
+            <p>Возникновение микроистории было ответом на кризис макроисторических подходов, прежде всего – школы «Анналов» с её фокусом на социальных структурах, количественных методах и «долгой длительности». К 1970-м годам стало очевидно, что за усреднёнными показателями исчезает человеческая индивидуальность, а аномальные случаи, не вписывающиеся в серии, остаются за рамками исследования.</p>
+            <p>Другой важный фактор – влияние постмодернистской критики, которая поставила под сомнение возможность объективного знания и линейные метанарративы. Микроисторики впитали эту рефлексивность, но не впали в релятивизм, предложив новый, более осторожный способ работы с прошлым.</p>
+            <p>Политический контекст также сыграл роль: основатели направления (Гинзбург, Леви) принадлежали к левому интеллектуальному спектру, но стремились преодолеть телеологический прогрессизм марксизма, обратившись к «нормальному исключительному» – маргиналам, чьи судьбы позволяют понять границы социального контроля.</p>
+            
+            <h2>Благодаря кому появилась</h2>
+            <p><strong>Карло Гинзбург</strong> (р. 1939) – самая известная фигура. Его книга «Сыр и черви» (1976) о космологии мельника Меноккио стала бестселлером и образцом микроисторического метода. Гинзбург разработал концепцию «уликовой парадигмы», уподобляя работу историка работе детектива.</p>
+            <p><strong>Джованни Леви</strong> (р. 1939) – наряду с Гинзбургом, лидер направления. Его работа «Нематериальное наследство» (1985) о сельской общине Пьемонта показала, как индивиды сохраняли свободу маневра в условиях структурных ограничений.</p>
+            <p><strong>Эдоардо Гренди</strong> – ввел ключевое понятие «нормальное исключительное» (1977).</p>
+            <p><strong>Карло Пони</strong> – совместно с Гинзбургом разработал «номинативную парадигму» – прослеживание судеб конкретных поименованных индивидов.</p>
+            
+            <!-- БЛОК ОСНОВНЫЕ АВТОРЫ -->
+            <div class="authors-block">
+                <h2>Основные авторы направления</h2>
+                <div class="authors-grid">
+                    
+                    <!-- КЛИКАБЕЛЬНЫЙ БЛОК ГИНЗБУРГА -->
+                    <div class="author-block clickable" onclick="location.href='carlo-ginzburg.html'">
+                        <div class="author-name">Карло Гинзбург</div>
+                        <div class="author-years">Carlo Ginzburg (р. 1939)</div>
+                        <div class="author-role">Итальянский историк, автор «Сыра и червей», создатель «уликовой парадигмы»</div>
+                        <div class="clickable-hint">⚡ Нажмите для биографии →</div>
+                    </div>
+                    
+                    <!-- НЕКЛИКАБЕЛЬНЫЕ БЛОКИ -->
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Джованни Леви</div>
+                        <div class="author-years">Giovanni Levi (р. 1939)</div>
+                        <div class="author-role">Итальянский историк, автор «Нематериального наследства»</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Эдоардо Гренди</div>
+                        <div class="author-years">Edoardo Grendi (1925–1999)</div>
+                        <div class="author-role">Ввел понятие «нормальное исключительное»</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Карло Пони</div>
+                        <div class="author-years">Carlo Poni (1923–2015)</div>
+                        <div class="author-role">Разработчик «номинативной парадигмы»</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="../index.html" class="back-button">← На главную</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+</body>
+</html>

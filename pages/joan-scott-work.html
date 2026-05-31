@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Работа с текстом | Джоан Скотт | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .work-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-left: 1.6rem;
+        }
+        
+        .text-with-sidebar {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .main-text {
+            flex: 2;
+            min-width: 250px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 1.2rem;
+            border-left: 3px solid var(--red);
+            align-self: flex-start;
+        }
+        
+        .sidebar h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--red-dark);
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3rem;
+        }
+        
+        .sidebar p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+        
+        .sidebar .book-title {
+            font-weight: 700;
+            color: var(--black);
+            font-size: 0.95rem;
+        }
+        
+        .quote-block {
+            background: rgba(0, 0, 0, 0.02);
+            border-left: 4px solid #ccc;
+            padding: 1.2rem 1.5rem;
+            margin: 1rem 0;
+            font-style: normal;
+            font-size: 0.95rem;
+            color: #333;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .quote-block p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .quote-author {
+            text-align: right;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.5rem;
+        }
+        
+        .questions-block {
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .questions-block h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--red);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .questions-block ol {
+            margin-left: 1.5rem;
+        }
+        
+        .questions-block li {
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+        
+        .separator {
+            height: 2px;
+            background: linear-gradient(to right, var(--red), transparent);
+            margin: 2rem 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-right: 1rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        @media (max-width: 760px) {
+            .text-with-sidebar {
+                flex-direction: column;
+            }
+            .sidebar {
+                order: -1;
+            }
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Работа с текстом</h1>
+            <div class="work-subtitle">Джоан Скотт: гендер как категория исторического анализа, власть и производство знания</div>
+            
+            <!-- ========== ОТРЫВОК 1 (Scott, Gender: A Useful Category) ========== -->
+            <div class="text-with-sidebar">
+                <div class="main-text">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Отрывок 1 (из статьи «Gender: A Useful Category of Historical Analysis», 1986 г.)</h2>
+                    <div class="quote-block">
+                        <p>«Those who would codify the meanings of words fight, for words, like the ideas and things they are meant to signify, have a history. […] In its most recent usage, "gender" seems to have first appeared among American feminists who wanted to insist on the fundamentally social quality of distinctions based on sex. The word denoted a rejection of the biological determinism implicit in the use of such terms as "sex" or "sexual difference." "Gender" also stressed the relational aspect of normative definitions of femininity. According to this view, women and men were defined in terms of one another, and no understanding of either could be achieved by entirely separate study.»</p>
+                        <p>«Те, кто пытается закрепить раз и навсегда значения слов, обречены на неудачу, потому что слова, как и идеи и вещи, которые они обозначают, имеют свою историю. […] В своём современном понимании термин "гендер" появился среди американских феминисток, которые хотели подчеркнуть социальный характер различий между полами. Это слово стало способом отказаться от биологического детерминизма, который подразумевается понятиями "пол" или "половые различия". "Гендер" также подчёркивает, что женственность и мужественность определяются всегда относительно друг друга. Невозможно по-настоящему понять одну сторону, не изучая другую.»</p>
+                        <p>«Натали Земон Дэвис ещё в 1975 году говорила, что нас должно интересовать прошлое и женщин, и мужчин. Мы не должны заниматься только "подчинённым полом", как историк класса не должен изучать только крестьян. Наша задача — понять, какое значение имели половые роли и сексуальная символика в разные эпохи, как они работали на сохранение или изменение социального порядка. Самое важное, пожалуй, в том, что изучение женщин, по мнению многих феминистских исследователей, должно не просто добавить новую тему, а полностью изменить сами подходы и стандарты исторической науки.»</p>
+                        <div class="quote-author">Scott J. W. Gender: A Useful Category of Historical Analysis // The American Historical Review. 1986. Vol. 91. No. 5. P. 1053–1055, 1056–1057.</div>
+                    </div>
+                    
+                    <div class="questions-block">
+                        <h3>📖 Проблемные задания</h3>
+                        <ol>
+                            <li>Если мужественность и женственность являются исторически изменчивыми категориями, то как это меняет задачи историка по сравнению с традиционной политической историей?</li>
+                            <li>Почему, по мысли Скотт, невозможно изучать историю женщин отдельно от истории мужчин? Что это говорит о самом понимании гендера?</li>
+                            <li>Чем отличается исследование гендера как социальной конструкции от поиска «естественных» различий между полами?</li>
+                            <li>Какие стороны прошлого остаются незаметными, если историк рассматривает половые различия как нечто само собой разумеющееся?</li>
+                            <li>Почему появление понятия «гендер» можно рассматривать не просто как введение нового термина, а как изменение самого способа объяснения исторических процессов?</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <h4>📚 «Gender: A Useful Category of Historical Analysis» (1986 г.)</h4>
+                    <p>Эта статья, опубликованная в одном из главных американских исторических журналов, стала, по сути, манифестом нового направления. Написанная в разгар споров внутри феминизма и под сильным влиянием постструктурализма, она предлагала перейти от простого «добавления» женщин к глубокому анализу гендера как категории, которая помогает понять, как устроены власть и социальный порядок.</p>
+                    <p>Скотт показывает, что гендер помогает выйти за рамки простого описания и поставить под сомнение сами основы традиционной исторической науки.</p>
+                </div>
+            </div>
+            
+            <!-- ========== ОТРЫВОК 2 (Scott, Gender: A Useful Category) ========== -->
+            <div class="separator"></div>
+            
+            <div class="text-with-sidebar">
+                <div class="main-text">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Отрывок 2 (из статьи «Gender: A Useful Category of Historical Analysis», 1986 г.)</h2>
+                    <div class="quote-block">
+                        <p>«Gender is a primary field within which or by means of which power is articulated. Gender, then, provides a way to decode meaning and to understand the complex connections among various forms of human interaction. The point is that gender is not merely a descriptive category but an analytic one that reveals how power operates.</p>
+                        <p>Гендер — это одно из главных полей, внутри которого или с помощью которого артикулируется власть. Он даёт нам инструмент, чтобы расшифровывать смыслы и понимать сложные связи между разными формами человеческих взаимодействий. Важно, что гендер — это не просто описательная категория, а аналитическая, которая позволяет увидеть, как на самом деле работает власть.</p>
+                        <p>Гендер — это знание о половых различиях. И здесь знание понимается в том смысле, который вкладывал в это слово Мишель Фуко: это то, что культуры и общества производят о человеческих отношениях. Изучая гендер, мы видим, как создаются и поддерживаются социальные различия и как они связаны с властью. Гендер помогает нам понять, как представления о "мужском" и "женском" организуют наше восприятие истории и само написание исторических текстов.»</p>
+                        <div class="quote-author">Scott J. W. Gender: A Useful Category of Historical Analysis // The American Historical Review. 1986. Vol. 91. No. 5. P. 1067–1070</div>
+                    </div>
+                    
+                    <div class="questions-block">
+                        <h3>📖 Проблемные задания</h3>
+                        <ol>
+                            <li>Что меняется в понимании власти, если рассматривать гендер не как характеристику людей, а как механизм организации общественных отношений?</li>
+                            <li>Почему Скотт называет гендер аналитической категорией, а не просто объектом исследования?</li>
+                            <li>Как изучение гендерных различий помогает обнаружить скрытые механизмы власти, которые не всегда видны в политических институтах и законах?</li>
+                            <li>В какой степени гендерная история предлагает переосмыслить причины исторических изменений, а не только дополнить существующие исторические нарративы?</li>
+                            <li>Если гендер является способом производства и поддержания власти, то может ли историк оставаться полностью нейтральным при его изучении? Почему?</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <h4>📚 «Gender: A Useful Category of Historical Analysis» (1986 г.)</h4>
+                    <p>Эта статья, опубликованная в одном из главных американских исторических журналов, стала, по сути, манифестом нового направления. Написанная в разгар споров внутри феминизма и под сильным влиянием постструктурализма, она предлагала перейти от простого «добавления» женщин к глубокому анализу гендера как категории, которая помогает понять, как устроены власть и социальный порядок.</p>
+                    <p>Скотт показывает, что гендер помогает выйти за рамки простого описания и поставить под сомнение сами основы традиционной исторической науки.</p>
+                </div>
+            </div>
+            
+            <!-- КНОПКИ НАВИГАЦИИ -->
+            <div>
+                <a href="joan-scott.html" class="back-button">← Назад к биографии Скотт</a>
+                <a href="gendernaya-istoriya.html" class="back-button">← Назад к гендерной истории</a>
+                <a href="../index.html" class="back-button">← На главную</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+</body>
+</html>

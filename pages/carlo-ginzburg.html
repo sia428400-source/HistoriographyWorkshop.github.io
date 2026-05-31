@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Карло Гинзбург | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-left: 1.6rem;
+            font-style: italic;
+        }
+        
+        .photo-left {
+            float: left;
+            width: 220px;
+            margin: 0 1.5rem 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+            background: #f0f0f0;
+        }
+        
+        .photo-left img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .photo-right {
+            float: right;
+            width: 220px;
+            margin: 0 0 1rem 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+            background: #f0f0f0;
+        }
+        
+        .photo-right img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .direction-content h2 {
+            font-size: 1.5rem;
+            color: var(--red-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 1px solid var(--gray-light);
+            padding-bottom: 0.3rem;
+        }
+        
+        .direction-content h3 {
+            font-size: 1.2rem;
+            color: var(--black);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+            text-align: justify;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        .highlight-block {
+            background: linear-gradient(135deg, rgba(179, 59, 44, 0.05), rgba(179, 59, 44, 0.02));
+            border-left: 4px solid var(--red);
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+            overflow: hidden;
+        }
+        
+        .bibliography {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--red);
+            clear: both;
+        }
+        
+        .bibliography p {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .bibliography p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-right: 1rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        @media (max-width: 760px) {
+            .photo-left, .photo-right {
+                float: none;
+                width: 100%;
+                max-width: 280px;
+                margin: 1rem auto;
+                display: block;
+            }
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Карло Гинзбург</h1>
+            <div class="subtitle">Carlo Ginzburg (р. 1939) — итальянский историк, основоположник микроистории, автор «уликовой парадигмы»</div>
+            
+            <!-- ПЕРВАЯ ФОТОГРАФИЯ СЛЕВА -->
+            <div class="photo-left">
+                <img src="" alt="Карло Гинзбург" id="photo1" onerror="this.src='https://via.placeholder.com/220x280?text=Карло+Гинзбург'">
+            </div>
+            
+            <p>Карло Гинзбург родился 15 апреля 1939 года в Турине (Италия). Его отец, Леоне Гинзбург, был филологом, историком литературы и переводчиком русской литературы, выходцем из Одессы. Мать, Наталья Гинзбург, являлась известной итальянской писательницей. Оба родителя были антифашистами и евреями. После падения режима Муссолини в 1943 году отец был арестован нацистами за подпольную деятельность и убит в 1944 году. Сам Карло спасался от преследователей под чужим именем у нееврейской родственницы.</p>
+            
+            <p>В 1961 году Гинзбург окончил Высшую нормальную школу в Пизе. В 1964 году работал приглашенным научным сотрудником в Институте Варбурга в Лондоне. Преподавал в университетах Рима, Болоньи, Лечче, а с 1988 по 2006 год занимал должность профессора итальянского Возрождения в Калифорнийском университете в Лос-Анджелесе. С 2006 года преподает в Высшей нормальной школе в Пизе.</p>
+            
+            <div class="clearfix"></div>
+            
+            <h2>Влияние</h2>
+            <div class="highlight-block">
+                <p><strong>Во-первых,</strong> происхождение из семьи интеллектуалов-антифашистов и еврейское происхождение определили его раннюю травму: после расстрела отца в 1944 году Карло вынужден был скрываться под чужим именем у нееврейской родственницы. Этот опыт преследования и жизни под ложной идентичностью сформировал его устойчивый интерес к маргиналам, аутсайдерам и жертвам институционального насилия — центральной теме его исследований.</p>
+            </div>
+            
+            <!-- ВТОРАЯ ФОТОГРАФИЯ СПРАВА -->
+            <div class="photo-right">
+                <img src="" alt="Карло Гинзбург" id="photo2" onerror="this.src='https://via.placeholder.com/220x280?text=Гинзбург+в+библиотеке'">
+            </div>
+            
+            <div class="highlight-block">
+                <p><strong>Во-вторых,</strong> опыт работы в Институте Варбурга в Лондоне (1964 год) оказал решающее методологическое влияние. Институт специализировался на изучении выживания античных образов в европейской культуре и разрабатывал методы интерпретации визуальных и символических источников. Именно там Гинзбург познакомился с идеями Аби Варбурга о «патологии» культуры и значении незначительных деталей, что легло в основу его «уликовой парадигмы».</p>
+            </div>
+            
+            <div class="highlight-block">
+                <p><strong>В-третьих,</strong> политический контекст Италии 1960–1970-х годов сыграл важную роль. Гинзбург принадлежал к левому интеллектуальному спектру, но разочаровался в ортодоксальном марксизме с его телеологическим взглядом на историю как закономерное движение к коммунизму. Это привело его к поиску альтернативных способов изучения прошлого, где акцент смещался с классов и структур на конкретных индивидов и их свободу выбора в условиях жестких ограничений.</p>
+            </div>
+            
+            <div class="highlight-block">
+                <p><strong>В-четвертых,</strong> научная среда вокруг журнала Quaderni storici в Болонье стала интеллектуальным катализатором. Дискуссии с Джованни Леви, Эдоардо Гренди и Карло Пони в 1970-е годы привели к выработке принципов микроистории как осознанной реакции на кризис школы Анналов. Гинзбург критиковал структурализм за «уравнивание индивидов как социально-экономико-культурных агентов» и потерю человеческой индивидуальности.</p>
+            </div>
+            
+            <div class="highlight-block">
+                <p><strong>В-пятых,</strong> доступ к архивам инквидиции определил конкретную источниковую базу его исследований. Обнаружив протоколы процессов над фриульскими бенанданти и мельником Меноккио, Гинзбург получил уникальный материал — голоса людей из низов, зафиксированные их врагами. Это обстоятельство позволило ему разработать метод «обратного прочтения» источников: извлечение картины мира подсудимых из обвинительных документов.</p>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <h2>Избранная библиография</h2>
+            <div class="bibliography">
+                <p><strong>1.</strong> Гинзбург, К. Загадка Пьеро: Пьеро делла Франческо. Пер. с итал. М. Б. Велижева. Москва: Новое литературное обозрение, 2019. 216 с.</p>
+                <p><strong>2.</strong> Гинзбург, К. Судья и историк: Размышления на полях процесса Софри. Пер. с итал. М. Б. Велижева. Москва: Новое литературное обозрение, 2021. 208 с.</p>
+                <p><strong>3.</strong> Гинзбург, К. Сыр и черви. Картина мира одного мельника, жившего в XVI веке. Пер. с итал. Андреева М. Л., Архангельской М. Н. Москва: РОССПЭН, 2000. 272 с.</p>
+                <p><strong>4.</strong> Гинзбург, К. Мифы-эмблемы-приметы. Морфология и история. Перевод С. Л. Козлова. Москва: Новое издательство, 2004. 348 с.</p>
+                <p><strong>5.</strong> Ginzburg, C. The Night Battles: Witchcraft & Agrarian Cults in the Sixteenth & Seventeenth Centuries. Translated by John Tedeschi and Anne Tedeschi. London: Routledge, 1983.</p>
+            </div>
+            
+            <!-- КНОПКИ НАВИГАЦИИ -->
+           <div>
+    <a href="istoriya-ponyatij.html" class="back-button">← Назад к истории понятий</a>
+    <a href="../index.html" class="back-button">← На главную</a>
+    <a href="carlo-ginzburg-work.html" class="back-button">📖 Работа с текстом</a>
+</div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+
+    <script>
+        // ВСТАВЬТЕ ССЫЛКИ НА ФОТОГРАФИИ КАРЛО ГИНЗБУРГА
+    document.getElementById('photo1').src = '../img/Carlo_Ginzburg_par_Claude_Truong-Ngoc_mars_2013.jpg';
+    document.getElementById('photo2').src = '../img/Warburg_Institute_entrance.JPG';
+    </script>
+</body>
+</html>

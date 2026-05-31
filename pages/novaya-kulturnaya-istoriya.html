@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Новая культурная история | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .direction-content h2 {
+            font-size: 1.3rem;
+            color: var(--red-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+            text-align: justify;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        .authors-block {
+            margin: 2rem 0 1.5rem 0;
+        }
+        
+        .authors-block h2 {
+            font-size: 1.6rem;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--red);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+        
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .author-block {
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .author-block.clickable {
+            cursor: pointer;
+            border-left: 4px solid var(--red);
+        }
+        
+        .author-block.clickable:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: var(--red);
+        }
+        
+        .author-block.non-clickable {
+            opacity: 0.7;
+            border-left: 4px solid #ccc;
+        }
+        
+        .author-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--black);
+        }
+        
+        .clickable .author-name {
+            color: var(--red);
+        }
+        
+        .author-years {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-role {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .clickable-hint {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        @media (max-width: 760px) {
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Новая культурная история (New Cultural History)</h1>
+            
+            <p>Термин «новая культурная история» вошел в научный оборот в сборнике материалов конференции «Французская история: тексты и культура» Линн Хант в 1987 году. Именно в этот период появился некий интерес к переосмыслению изучения культуры, со статичной истории норм и институтов в сторону чего-то нового. Изучения практик. Лозунг, выдвинутый Хант был такой – «история религиозных практик вместо теологии, история речи вместо лингвистики, история экспериментов вместо научной теории».</p>
+            
+            <p>Л. П. Репина в своем труде указывает на взаимовлияние всех сторон культурного развития – практики развиваются под контролем институтов, но со временем они сами начинают влиять на эти институты. Соответственно, объект исследования новой культурной истории заключается в изучении соотношения между нормами, представлениями и практиками. Изучение практик предполагает применение антропологического подхода, когда историки исследуют жизнь отдельных людей, небольших сообществ, или историю эмоций и тела – и то, как это репрезентировалось и репрезентируется.</p>
+            
+            <p>Новая культурная история получила особенно широкое распространение в США, также получила отклик во Франции (Р. Шартье, Д. Морне), в Германии (Букхардт) и Голландии (Хейзинги). П. Бёрк указывает, что сегодня новая культурная история – преобладающая форма культурной истории и истории как таковой.</p>
+            
+            
+            <!-- БЛОК ОСНОВНЫЕ АВТОРЫ -->
+            <div class="authors-block">
+                <h2>Основные авторы направления</h2>
+                <div class="authors-grid">
+                    
+                    <!-- КЛИКАБЕЛЬНЫЙ БЛОК ПИТЕРА БЁРКА -->
+                    <div class="author-block clickable" onclick="location.href='peter-burke.html'">
+                        <div class="author-name">Питер Бёрк</div>
+                        <div class="author-years">Peter Burke (р. 1937)</div>
+                        <div class="author-role">Британский историк, теоретик новой культурной истории и исторической антропологии</div>
+                        <div class="clickable-hint">⚡ Нажмите для биографии →</div>
+                    </div>
+                    
+                    <!-- НЕКЛИКАБЕЛЬНЫЕ БЛОКИ -->
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Роже Шартье</div>
+                        <div class="author-years">Roger Chartier (р. 1945)</div>
+                        <div class="author-role">Французский историк, специалист по истории книги и чтения</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Линн Хант</div>
+                        <div class="author-years">Lynn Hunt (р. 1945)</div>
+                        <div class="author-role">Американский историк, ввела термин «новая культурная история»</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="../index.html" class="back-button">← На главную</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+</body>
+</html>

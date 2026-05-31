@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>История понятий | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        /* Стили для блока авторов */
+        .authors-block {
+            margin: 2rem 0 1.5rem 0;
+        }
+        
+        .authors-block h2 {
+            font-size: 1.6rem;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--red);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+        
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .author-block {
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .author-block.clickable {
+            cursor: pointer;
+            border-left: 4px solid var(--red);
+        }
+        
+        .author-block.clickable:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: var(--red);
+        }
+        
+        .author-block.non-clickable {
+            opacity: 0.7;
+            border-left: 4px solid #ccc;
+        }
+        
+        .author-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--black);
+        }
+        
+        .clickable .author-name {
+            color: var(--red);
+        }
+        
+        .author-years {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-role {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .clickable-hint {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        .direction-container {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>История понятий (Begriffsgeschichte)</h1>
+            
+            <!-- ОСНОВНОЙ ТЕКСТ О НАПРАВЛЕНИИ -->
+            <p>Термин «история понятий» (Begriffsgeschichte) утвердился в методологическом поле гуманитарных наук в связи с реализацией масштабного лексикографического проекта «Исторические основные понятия» (Geschichtliche Grundbegriffe), первый том которого вышел в 1972 году под редакцией Отто Бруннера, Вернера Конце и Райнхарта Козеллека. Данный подход оформился в качестве критической альтернативы традиционной истории идей (Ideengeschichte). В отличие от нее, история понятий исследует не абстрактные, вневременные философские категории, а конкретную языковую практику, зафиксированную в социально-политическом контексте определенной эпохи.</p>
+            
+            <!-- БЛОК ОСНОВНЫЕ АВТОРЫ -->
+            <div class="authors-block">
+                <h2>Основные авторы направления</h2>
+                <div class="authors-grid">
+                    
+                    <!-- КЛИКАБЕЛЬНЫЙ БЛОК КОЗЕЛЛЕКА -->
+                    <div class="author-block clickable" onclick="location.href='rainhart-kozellek.html'">
+                        <div class="author-name">Райнхарт Козеллек</div>
+                        <div class="author-years">Reinhart Koselleck (1923–2006)</div>
+                        <div class="author-role">Немецкий историк, теоретик истории, основатель Begriffsgeschichte</div>
+                        <div class="clickable-hint">⚡ Нажмите для биографии →</div>
+                    </div>
+                    
+                    <!-- НЕКЛИКАБЕЛЬНЫЕ БЛОКИ -->
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Отто Бруннер</div>
+                        <div class="author-years">Otto Brunner (1898–1982)</div>
+                        <div class="author-role">Австрийский историк, соредактор «Geschichtliche Grundbegriffe»</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Вернер Конце</div>
+                        <div class="author-years">Werner Conze (1910–1986)</div>
+                        <div class="author-role">Немецкий социальный историк, соредактор «Geschichtliche Grundbegriffe»</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Ханс-Георг Гадамер</div>
+                        <div class="author-years">Hans-Georg Gadamer (1900–2002)</div>
+                        <div class="author-role">Философ, учитель Козеллека, автор «Истины и метода»</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Карл Шмитт</div>
+                        <div class="author-years">Carl Schmitt (1888–1985)</div>
+                        <div class="author-role">Правовед и политический философ, повлиявший на Козеллека</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="../index.html" class="back-button">← На главную</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+</body>
+</html>

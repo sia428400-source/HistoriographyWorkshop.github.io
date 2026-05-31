@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Хейден Уайт | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-left: 1.6rem;
+            font-style: italic;
+        }
+        
+        .photo-left {
+            float: left;
+            width: 220px;
+            margin: 0 1.5rem 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+            background: #f0f0f0;
+        }
+        
+        .photo-left img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .photo-right {
+            float: right;
+            width: 220px;
+            margin: 0 0 1rem 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+            background: #f0f0f0;
+        }
+        
+        .photo-right img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .direction-content h2 {
+            font-size: 1.5rem;
+            color: var(--red-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 1px solid var(--gray-light);
+            padding-bottom: 0.3rem;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+            text-align: justify;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        .bibliography {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--red);
+            clear: both;
+        }
+        
+        .bibliography p {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .bibliography p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-right: 1rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        @media (max-width: 760px) {
+            .photo-left, .photo-right {
+                float: none;
+                width: 100%;
+                max-width: 280px;
+                margin: 1rem auto;
+                display: block;
+            }
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Хейден Уайт</h1>
+            <div class="subtitle">Hayden White (1928–2018) — американский историк, автор «Метаистории», ключевая фигура постмодернистской философии истории</div>
+            
+            <!-- ПЕРВАЯ ФОТОГРАФИЯ СЛЕВА -->
+            <div class="photo-left">
+                <img src="" alt="Хейден Уайт" id="photo1" onerror="this.src='https://via.placeholder.com/220x280?text=Хейден+Уайт'">
+            </div>
+            
+            <p>Хейден Уайт (1928–2018) начал свой академический путь в Уэйнском государственном университете (Детройт), который окончил в 1951 году со степенью бакалавра искусств. Продолжив обучение в Мичиганском университете, он в 1952 году защитил магистерскую диссертацию, а в 1956 году — докторскую диссертацию (PhD). Ранние исследования Уайта лежали в области средневековой европейской интеллектуальной и церковной истории; его диссертационная работа была посвящена церковной политике Папы Иоанна VIII в IX веке. В течение своей институциональной карьеры Уайт занимал профессорские должности в Рочестерском университете (1958–1968), Калифорнийском университете в Лос-Анджелесе (1968–1973) и Уэслианском университете (1973–1978). Наиболее продолжительный период его деятельности связан с Калифорнийским университетом в Санта-Крузе, где он с 1978 по 1994 год руководил междисциплинарной программой «История сознания» (History of Consciousness). В поздний период жизни он также преподавал сравнительную литературу в Стэнфордском университете.</p>
+            
+            <p>Переход Уайта от традиционной медиевистики к критической философии истории произошел в 1960-е годы под влиянием методологического кризиса в американской исторической науке. Важнейшим фактором его эволюции стало освоение европейского структурализма, культурной антропологии и литературной теории. Идеи Бенедетто Кроче и Робина Джорджа Коллингвуда послужили основой для его критики позитивистского понимания исторического факта. Монументальный труд Нортропа Фрая «Анатомия критики» (1957) предоставил Уайту классификацию литературных жанров и архетипов, которую тот применил к историческим текстам, а концепции Ролана Барта, Мишеля Фуко и Клода Леви-Стросса позволили интерпретировать историческое сознание как знаковую систему.</p>
+            
+            <div class="clearfix"></div>
+            
+            <!-- ВТОРАЯ ФОТОГРАФИЯ СПРАВА -->
+            <div class="photo-right">
+                <img src="" alt="Хейден Уайт" id="photo2" onerror="this.src='https://via.placeholder.com/220x280?text=Уайт+в+библиотеке'">
+            </div>
+            
+            <p>Главный теоретический вклад Уайта зафиксирован в его монографии «Метаистория: Историческое воображение в Европе XIX века» (1973). В этой работе он обосновал существование «метаисторического базиса» — скрытой структуры поэтического и философского характера, которая предопределяет конструирование исторического текста еще до начала сбора эмпирических данных. Уайт выделил три уровня концептуализации, которые историк использует для превращения хроники в связное повествование: сюжетосложение (emplotment), формальная аргументация и идеологическая импликация. На глубинном уровне историческое воображение, согласно Уайту, предопределяется выбором одного из четырех лингвистических тропов: метафоры, метонимии, синекдохи или иронии. Последующие труды Уайта («Тропики дискурса», 1978; «Содержимое формы», 1987) окончательно переориентировали мировую философию истории на семантический и риторический анализ текста.</p>
+            
+            <p>Логико-семантическое развитие идей нарративизма, обозначенных Уайтом, нашло отражение в трудах нидерландского философа Франклина Рудольфа Анкерсмита (родился в 1945 году). Высшее образование Анкерсмит получил в Гронингенском университете, где одновременно изучал историю и философию. В 1981 году в этом же университете он защитил докторскую диссертацию по теме «Нарративная логика: Семантический анализ языка историков», публикация которой на английском языке в 1983 году принесла ему международное признание. Вся профессиональная деятельность Анкерсмита была связана с Гронингенским университетом, где он занимал должность профессора философии истории и интеллектуальной истории до своего выхода на пенсию в 2010 году. В 2002 году он был избран членом Королевской академии наук и искусств Нидерландов, а также активно участвовал в политической жизни страны в качестве члена Либеральной партии (VVD).</p>
+            
+            <div class="clearfix"></div>
+            
+            <h2>Избранная библиография</h2>
+            <div class="bibliography">
+                <p><strong>1.</strong> Потапова, Н. Д. Лингвистический поворот в историографии : учебное пособие / Н. Д. Потапова. — СПб. : Издательство Европейского университета в Санкт-Петербурге, 2015. — 380 с.</p>
+                <p><strong>2.</strong> Анкерсмит, Ф. Р. Нарративная логика. Семантический анализ языка историков / Ф. Р. Анкерсмит ; перевод с английского О. Гавришиной, А. Олейникова. — Москва : Идея-Пресс, 2003. — 364 с. (Теоретический труд Анкерсмита, в котором исследуется структура исторического повествования и вводится понятие «нарративного вещества».)</p>
+                <p><strong>3.</strong> Анкерсмит, Ф. Р. История и тропология: взлет и падение метафоры / Ф. Р. Анкерсмит ; перевод с английского М. Кукарцевой. — Москва : Прогресс-Традиция, 2003. — 496 с. (Исследование роли лингвистических тропов и метафор в конструировании исторического нарратива.)</p>
+                <p><strong>4.</strong> Jenkins, K. Rethinking History / K. Jenkins. — London ; New York : Routledge, 1991. — 102 p. (Введение в теорию истории эпохи постмодерна, содержащее разграничение между прошлым и историографией как текстовым продуктом.)</p>
+                <p><strong>5.</strong> Анкерсмит, Ф. Р. Возвышенный исторический опыт / Ф. Р. Анкерсмит ; перевод с английского под ред. А. Олейникова. — Москва : Европа, 2007. — 612 с. (Работа, посвященная анализу до-языкового и эмоционального восприятия исторического прошлого.)</p>
+                <p><strong>6.</strong> Jenkins, K. On 'What is History?': From Carr and Elton to Rorty and White / K. Jenkins. — London : Routledge, 1995. — 200 p. (Критический анализ классических модернистских концепций исторического познания.)</p>
+            </div>
+            
+            <!-- КНОПКИ НАВИГАЦИИ -->
+            <div>
+                <a href="postmodernizm.html" class="back-button">← Назад к постмодернизму</a>
+                <a href="../index.html" class="back-button">← На главную</a>
+                <a href="hayden-white-work.html" class="back-button">📖 Работа с текстом</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+
+    <script>
+        // ВСТАВЬТЕ ССЫЛКИ НА ФОТОГРАФИИ ХЕЙДЕНА УАЙТА
+         document.getElementById('photo1').src = '../img/2026-05-31_17-05-49.png';
+        // document.getElementById('photo2').src = '../img/white-work.jpg';
+    </script>
+</body>
+</html>

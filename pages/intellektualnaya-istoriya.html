@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Интеллектуальная история | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .direction-content h2 {
+            font-size: 1.3rem;
+            color: var(--red-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .direction-content h3 {
+            font-size: 1.1rem;
+            color: var(--black);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+            text-align: justify;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        .authors-block {
+            margin: 2rem 0 1.5rem 0;
+        }
+        
+        .authors-block h2 {
+            font-size: 1.6rem;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--red);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+        
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .author-block {
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .author-block.clickable {
+            cursor: pointer;
+            border-left: 4px solid var(--red);
+        }
+        
+        .author-block.clickable:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: var(--red);
+        }
+        
+        .author-block.non-clickable {
+            opacity: 0.7;
+            border-left: 4px solid #ccc;
+        }
+        
+        .author-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--black);
+        }
+        
+        .clickable .author-name {
+            color: var(--red);
+        }
+        
+        .author-years {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-role {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .clickable-hint {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        @media (max-width: 760px) {
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Интеллектуальная история (Intellectual History)</h1>
+            
+            <p>Интеллектуальная история — это направление в исторической науке, которое изучает историю интеллектуальной деятельности людей, их идей, их создания, распространения и влияния на общество. Она исследует, как идеи формировались, взаимодействовали с культурой, биографией и социокультурным окружением их носителей.</p>
+            
+            <h2>Особенности интеллектуальной истории</h2>
+            
+            <h3>1. Междисциплинарность</h3>
+            <p>Интеллектуальные историки часто обращаются к данным и методам из других областей — философии, политологии, антропологии, социологии, литературы и др. Это связано с тем, что идеи редко носят исключительно политический, философский или другой характер.</p>
+            
+            <h3>2. Изучение контекста</h3>
+            <p>Идеи анализируются не изолированно, а в их связи с социальным, культурным и историческим контекстом.</p>
+            
+            <h3>3. Фокус на исторических аспектах творческой деятельности человека</h3>
+            <p>Исследуются условия, формы и результаты интеллектуальной деятельности в долгосрочной исторической перспективе.</p>
+            
+            <p>Ключевую роль в становлении современной интеллектуальной истории сыграл Артур О. Лавджой (1873–1962). Он ввёл термин «история идей» и инициировал её систематическое изучение в первые десятилетия XX века. Его работа «Великая цепь бытия» (1936) стала классикой интеллектуальной истории. Лавджой предложил изучать универсальные «идеи-блоки», которые перемещаются во времени и используются как модули в сложных конструкциях разных учений и теорий.</p>
+            
+            <p>В 70-е годы XX века в Соединённых Штатах Америки, Великобритании, Франции, скандинавских странах начинается формирование научного сообщества так называемых новых интеллектуальных историков. Сам термин интеллектуальная история на первых порах был обусловлен названием той области исследований, которая была взята историками как объект изучения. Позднее это понятие стало указывать на «общий подход к прошлому как к истории постижения, понимания прошлого». Этим объясняется интерес новых интеллектуальных историков к историческому описанию. Объектом их изучения стали язык, структура, содержание текста, «создаваемого исследователем в процессе прочтения исторических свидетельств».</p>
+            
+            <p>К 90-м годам в среде профессиональных историков утверждаются имена Хейдена Уайта, Доминика Лакапра, Луи Минка, Стивена Каплана, Роберта Дарнтона, Поля Вейна, Дэвида Фишера, Ганса Келлнера, Лайонела Госсмэна, Марка Постера, Фрэнка Анкерсмита, Феликса Гилберта и других представителей новой волны интеллектуальной истории. И, хотя внутри самого сообщества формировались разные направления, их объединяла одна общая характеристика. Их мировоззрение строилось на отрицании «аксиомы объективной исторической реальности, которая определяла самосознание традиционных историков». Они поставили под сомнение главную аксиому новоевропейской историографии, выраженную в формулировке: «Пусть прошлое само заговорит». Иными словами, они не соглашались с тем подходом, который полагал убеждённость «познающего субъекта в самодостаточности реальности».</p>
+            
+            <!-- БЛОК ОСНОВНЫЕ АВТОРЫ -->
+            <div class="authors-block">
+                <h2>Основные авторы направления</h2>
+                <div class="authors-grid">
+                    
+                    <!-- КЛИКАБЕЛЬНЫЙ БЛОК КВЕНТИНА СКИННЕРА -->
+                    <div class="author-block clickable" onclick="location.href='quentin-skinner.html'">
+                        <div class="author-name">Квентин Скиннер</div>
+                        <div class="author-years">Quentin Skinner (р. 1940)</div>
+                        <div class="author-role">Британский историк, основатель Кембриджской школы контекстуализма</div>
+                        <div class="clickable-hint">⚡ Нажмите для биографии →</div>
+                    </div>
+                    
+                    <!-- НЕКЛИКАБЕЛЬНЫЕ БЛОКИ -->
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Артур О. Лавджой</div>
+                        <div class="author-years">Arthur O. Lovejoy (1873–1962)</div>
+                        <div class="author-role">Американский историк, ввел термин «история идей»</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Хейден Уайт</div>
+                        <div class="author-years">Hayden White (1928–2018)</div>
+                        <div class="author-role">Американский историк, теоретик нарратива</div>
+                    </div>
+                    
+                    <div class="author-block non-clickable">
+                        <div class="author-name">Фрэнк Анкерсмит</div>
+                        <div class="author-years">Frank Ankersmit (р. 1945)</div>
+                        <div class="author-role">Нидерландский философ истории</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="../index.html" class="back-button">← На главную</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+</body>
+</html>

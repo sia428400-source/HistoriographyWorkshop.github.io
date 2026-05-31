@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Райнхарт Козеллек | Практикум по историографии</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .direction-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        
+        .direction-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--black);
+            border-left: 4px solid var(--red);
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-left: 1.6rem;
+            font-style: italic;
+        }
+        
+        /* БЛОК С ФОТОГРАФИЕЙ СЛЕВА (в начале) */
+        .photo-left {
+            float: left;
+            width: 220px;
+            margin: 0 1.5rem 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+            background: #f0f0f0;
+        }
+        
+        .photo-left img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* БЛОК С ФОТОГРАФИЕЙ СПРАВА (в середине) */
+        .photo-right {
+            float: right;
+            width: 220px;
+            margin: 0 0 1rem 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+            background: #f0f0f0;
+        }
+        
+        .photo-right img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Очистка обтекания */
+        .clearfix {
+            clear: both;
+        }
+        
+        .direction-content h2 {
+            font-size: 1.5rem;
+            color: var(--red-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 1px solid var(--gray-light);
+            padding-bottom: 0.3rem;
+        }
+        
+        .direction-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #222;
+            text-align: justify;
+        }
+        
+        .direction-content strong {
+            color: var(--red-dark);
+        }
+        
+        /* КРАСИВЫЕ БЛОКИ ДЛЯ КЛЮЧЕВЫХ МОМЕНТОВ */
+        .highlight-block {
+            background: linear-gradient(135deg, rgba(179, 59, 44, 0.05), rgba(179, 59, 44, 0.02));
+            border-left: 4px solid var(--red);
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+            overflow: hidden;
+        }
+        
+        .highlight-block p {
+            margin-bottom: 0;
+        }
+        
+        .key-concept {
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .key-concept strong {
+            color: var(--red);
+            font-size: 1.05rem;
+        }
+        
+        .method-box {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+        
+        .influence-box {
+            background: rgba(179, 59, 44, 0.03);
+            border-radius: 12px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(179, 59, 44, 0.2);
+            overflow: hidden;
+        }
+        
+        .bibliography {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--red);
+            clear: both;
+        }
+        
+        .bibliography p {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .bibliography p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-right: 1rem;
+            padding: 0.8rem 1.8rem;
+            background-color: transparent;
+            border: 2px solid var(--red);
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: var(--red);
+            color: white;
+        }
+        
+        .direction-container {
+            min-height: 100vh;
+        }
+        
+        @media (max-width: 760px) {
+            .photo-left, .photo-right {
+                float: none;
+                width: 100%;
+                max-width: 280px;
+                margin: 1rem auto;
+                display: block;
+            }
+            .direction-content h1 {
+                font-size: 1.8rem;
+            }
+            .highlight-block, .key-concept, .method-box, .influence-box {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-fade">
+        <div class="bg-layer bg-1 active"></div>
+        <div class="bg-layer bg-2"></div>
+        <div class="bg-layer bg-3"></div>
+    </div>
+
+    <div class="container direction-container">
+        <header class="workshop-header">
+            <p class="workshop-subtitle">Практикум по зарубежной историографии</p>
+            <h1 class="workshop-title">Историк, идея, текст</h1>
+            <div class="title-decoration"></div>
+        </header>
+
+        <div class="direction-content">
+            <h1>Райнхарт Козеллек</h1>
+            <div class="subtitle">Reinhart Koselleck (1923–2006) — немецкий историк, теоретик истории, основатель «истории понятий» (Begriffsgeschichte)</div>
+            
+            <!-- ПЕРВАЯ ФОТОГРАФИЯ СЛЕВА (в начале) -->
+            <div class="photo-left">
+                <img src="" alt="Райнхарт Козеллек" id="photo1" onerror="this.src='https://via.placeholder.com/220x280?text=Р.+Козеллек'">
+            </div>
+            
+            <p>После катастроф двух мировых войн Козеллек в 1953 году, когда он только начинал свою карьеру, выдвинул постулат, что мы должны отбросить концепции истории, которые обеспечивали боеспособность идеологической ярости ХХ века – нацизма, но также и опасного противостояния советского коммунизма и американского либерализма в ядерную эпоху, и начать заново переосмысливать, что составляет настоящие «условия возможных историй». По мнению Козеллека, все современные ему идеологии утверждали, будто «законы истории» были на их стороне, чтобы оправдать любое насилие. Поэтому важнейшими задачами для историков должны стать демонтаж понятия истории и создание новой теории того, как на самом деле разворачиваются истории – хаотические, случайные, беспорядочные и жестокие, но с заметными паттернами.</p>
+            
+            <div class="clearfix"></div>
+            
+            <!-- КЛЮЧЕВОЙ ТЕЗИС -->
+            <div class="key-concept">
+                <p><strong>Основной методологический тезис Козеллека</strong> состоит в том, что социально-политические понятия функционируют одновременно как <strong>индикаторы</strong> исторических изменений и как их <strong>факторы</strong>. Понятие не просто регистрирует предзаданную социальную реальность, но и выступает необходимым условием для совершения любого человеческого действия. Формула Козеллека фиксирует эту взаимосвязь: исторический процесс невозможен без языкового понятийного аппарата, но и сами понятия обладают собственной исторической динамикой, не сводимой к чисто лингвистическим трансформациям.</p>
+            </div>
+            
+            <p>В отечественной методологии истории Begriffsgeschichte рассматривается как важный компонент междисциплинарных исследований, устанавливающий связь между социальной историей и лингвистической семантикой. Социальные институты действуют в границах наличных понятийных возможностей, однако развитие реальных практик со временем приводит к изменению значений слов и трансформации семантических полей. Объект исследования истории понятий локализован в зазоре между социальными изменениями и их концептуальной фиксацией в языке.</p>
+            
+            <!-- МЕТОДОЛОГИЧЕСКИЙ БЛОК -->
+            <div class="method-box">
+                <p>Метод Begriffsgeschichte предполагает одновременное использование синхронного и диахронного анализа источников. Синхронный метод направлен на реконструкцию семантической структуры языка в конкретный хронологический момент, выявление нормативных дефиниций и понятийных оппозиций. Диахронный метод прослеживает изменения семантики отдельных понятий на протяжении длительных временных интервалов. Данный подход требует обращения к прагматике употребления терминов, исследованию борьбы за номинацию между различными социальными группами и анализу того, как коллективный опыт фиксируется в базовых понятиях (Grundbegriffe).</p>
+            </div>
+            
+            <!-- ВТОРАЯ ФОТОГРАФИЯ СПРАВА (привязана к словарю) -->
+            <div class="photo-right">
+                <img src="" alt="Geschichtliche Grundbegriffe" id="photo2" onerror="this.src='https://via.placeholder.com/220x280?text=Словарь+Geschichtliche+Grundbegriffe'">
+            </div>
+            
+            <p>История понятий получила развитие в Германии (Билефельдская школа социальной истории), а также оказала существенное влияние на развитие Кембриджской школы контекстуализма (К. Скиннер, Дж. Покок) и французской исторической семантики. В современной историографии концептуальная история признана одним из базовых методов анализа политических и социальных макропроцессов, обеспечивающим верификацию выводов социальной и интеллектуальной истории.</p>
+            
+            <p>Главным теоретиком и методологом этого направления выступил Райнхарт Козеллек, разработавший оригинальную концепцию исторического времени и семантики. Козеллек получил образование в Гейдельбергском и Бристольском университетах, где его научная позиция формировалась под влиянием идей Х.-Г. Гадамера, В. Конце и К. Шмитта. В качестве профессора теории истории в Университете Билефельда он исследовал прусское административное право, социальные реформы XVIII–XIX веков и генезис европейского Просвещения. Научные интересы Козеллека также охватывали сферу визуальных источников, что отразилось в его трудах по политической иконографии и теории коммеморативных практик.</p>
+            
+            <div class="clearfix"></div>
+            
+            <!-- БЛОК БИБЛИОГРАФИИ -->
+            <h2>Избранная библиография</h2>
+            <div class="bibliography">
+                <p><strong>1.</strong> Словарь основных исторических понятий : Избранные статьи : в 2 т. / О. Бруннер, В. Конце, Р. Козеллек ; пер. с нем. К. Левинсона ; под науч. ред. Ю. Арнаутовой. — Москва : Новое литературное обозрение, 2014. — Т. 1. — 736 с. ; Т. 2. — 752 с. — (Серия «Интеллектуальная история»).</p>
+                <p><strong>2.</strong> Козеллек, Р. Исторические понятия и политические идеи : сборник статей / Р. Козеллек ; сост. и под ред. А. В. Михайловского. — Москва : Издательский дом Высшей школы экономики, 2006. — 312 с.</p>
+                <p><strong>3.</strong> Козеллек, Р. Прошедшее будущее. О семантике исторического времени / Р. Козеллек ; пер. с нем. И. Ф. Хулапа. — Москва : Новое литературное обозрение, 2010. — 384 с.</p>
+                <p><strong>4.</strong> Koselleck, R. Kritik und Krise: Eine Studie zur Pathogenese der bürgerlichen Welt / R. Koselleck. — Frankfurt am Main : Suhrkamp Verlag, 1973. — 248 S.</p>
+                <p><strong>5.</strong> Koselleck, R. Preußen zwischen Reform und Revolution: Allgemeines Landrecht und soziale Bewegung von 1791 bis 1848 / R. Koselleck. — Stuttgart : Ernst Klett Verlag, 1967. — 732 S.</p>
+                <p><strong>6.</strong> Koselleck, R. Vom Sinn und Unsinn der Geschichte: Aufsätze und Vorträge aus vier Jahrzehnten / R. Koselleck ; hrsg. von C. Dutt. — Berlin : Suhrkamp Verlag, 2010. — 387 S.</p>
+                <p><strong>7.</strong> Koselleck, R. Zeitschichten: Studien zur Historik / R. Koselleck. — Frankfurt am Main : Suhrkamp Verlag, 2000. — 399 S.</p>
+            </div>
+            
+            <!-- КНОПКИ НАВИГАЦИИ -->
+<div>
+    <a href="istoriya-ponyatij.html" class="back-button">← Назад к истории понятий</a>
+    <a href="../index.html" class="back-button">← На главную</a>
+    <a href="kozellek-work.html" class="back-button">📖 Работа с текстом</a>
+</div>
+
+    <footer class="site-footer">
+        <p>Практикум «Историк, идея, текст» — пространство методологических размышлений</p>
+    </footer>
+
+    <script>
+        // ВСТАВЬТЕ ССЫЛКИ НА ВАШИ ФОТОГРАФИИ ЗДЕСЬ
+        
+        // Первая фотография (слева, в начале страницы)
+        document.getElementById('photo1').src = '../img/Козеллек,_Райнхарт.jpg';
+        
+        // Вторая фотография (справа, рядом с текстом о словаре/влиянии)
+        document.getElementById('photo2').src = '../img/018edd12-5662-7dc8-ab08-725e7ced7877.jpg';
+    </script>
+
+
+</body>
+</html>
